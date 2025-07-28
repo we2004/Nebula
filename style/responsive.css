@@ -1,0 +1,115 @@
+@media (max-width: 1234px) {
+    .pic-container {
+        height: 300px;
+        width: 430px;
+    }
+
+    .text {
+        font-size: 10px;
+        max-width: 390px;
+    }
+}
+
+@media (max-width: 985px) {
+    .pic-container {
+        height: 300px;
+        width: 400px;
+    }
+
+    .text {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 925px) {
+    .pic-container {
+        height: 400px;
+        width: 555px;
+    }
+
+    .text {
+        font-size: 13px;
+        max-width: 430px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .pic-container {
+        height: 330px;
+        width: 480px;
+    }
+
+    .text {
+        font-size: 11px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 430px) {
+    .pic-container {
+        height: 290px;
+        width: 370px;
+    }
+
+    .text {
+        font-size: 9px;
+        max-width: 290px;
+    }
+
+    #range .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header .logo {
+        font-size: 1rem;
+    }
+
+    .header .logo::first-letter {
+        font-size: 1rem;
+
+    }
+
+    .header {
+        padding: 8px 0px;
+    }
+
+    .header a {
+        font-size: 15px;
+        margin-left: 8px;
+    }
+
+}
+
+@media (max-width: 390px) {
+    .header a {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .header .logo {
+        font-size: 1.5rem;
+
+    }
+
+    .header .logo::first-letter {
+        font-size: 1.5rem;
+
+    }
+
+    .pic-container {
+        height: 280px;
+        width: 350px;
+    }
+
+    .title {
+        font-size: 2.3rem;
+    }
+}

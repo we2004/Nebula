@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* padding: 0px 30px; */
+    background-color: #100811;
+    color: #EDF2F4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*main content*/
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0px 30px;
+}
+
+/*fonts*/
+.fredoka {
+    font-family: "Fredoka", sans-serif;
+}
+
+.quicksand {
+    font-family: "Quicksand", sans-serif;
+}
+
+/*header*/
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #100811;
+    padding: 5px 30px;
+
+    font-weight: 500;
+}
+
+.header a {
+    margin-left: 10px;
+    transition: all ease 0.15s;
+}
+
+.header a:hover {
+    text-shadow: 0px 2px 0px #E4D9FF,
+        0px 4px 3px #FAFAFF;
+}
+
+.header .logo {
+    font-size: 1.2rem;
+    font-style: oblique;
+
+    text-shadow: 0px 3px 0px #aaa1c8,
+        0px 5px 5px #FAFAFF;
+}
+
+.header .logo::first-letter {
+    font-size: 2rem;
+
+}
+
+/*general*/
+
+.pic-container {
+    height: 400px;
+    width: 555px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    background-color: black;
+
+    border: 2px solid #49264F;
+    border-radius: 15px;
+
+    box-shadow: 2px 2px 15px 1px #fafaff3e;
+}
+
+.pic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    /* background-image: url('https://apod.nasa.gov/apod/image/0412/Izw18_hst_full.jpg'); */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /* background-size: cover; */
+    transition: all ease 0.5s;
+
+    border-radius: 15px;
+}
+
+.text {
+    position: absolute;
+    z-index: 2;
+
+    text-align: justify;
+    padding: 5px 8px;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+
+    max-width: 460px;
+    background-color: rgba(0, 0, 0, 0.571);
+    border-radius: 8px;
+    transition: all ease 0.5s;
+}
+
+.text p {
+    margin-bottom: 5px;
+    color: rgb(146, 15, 15);
+    text-align: center;
+    font-weight: 700;
+
+    background-color: #EDF2F4;
+    border-radius: 5px;
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.title {
+    font-size: 2.8rem;
+    color: #EDF2F4;
+
+    text-shadow: 0px 3px 0px #aaa1c8,
+        0px 5px 5px #FAFAFF;
+
+}
+
+
+/*today and date and random*/
+
+.today-and-date {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+#date,
+#today,
+#today .generated-content,
+#date .generated-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+#today .date,
+.card .date {
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+#date .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#date .one-date-input,
+input#strt-date,
+input#end-date {
+    width: 200px;
+    padding: 10px 15px;
+
+    font-size: 20px;
+    border-radius: 8px;
+
+    background: none;
+    color: #EDF2F4;
+
+    border: 3px solid #49264F;
+
+}
+
+#random .gen-btn,
+.enter-btn {
+    padding: 13px 15px;
+    font-size: 20px;
+
+    cursor: pointer;
+    border: 3px solid #49264F;
+    border-radius: 8px;
+    background: none;
+    color: #EDF2F4;
+    font-weight: bold;
+
+
+    transition: all ease 0.5s;
+}
+
+.enter-btn:hover,
+#random .gen-btn:hover {
+    background-color: #EDF2F4;
+    color: #100811;
+}
+
+.enter-btn:active,
+#random .gen-btn:active {
+    opacity: 0.5;
+}
+
+/*random and range*/
+#random,
+#range {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+#random .gen-btn {
+    padding: 10px 60px;
+    margin-bottom: 30px;
+    font-size: 20px;
+
+}
+
+#random .random-pics-cont,
+#range .range-pics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    column-gap: 50px;
+}
+
+.card .date {
+    margin-top: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/*range*/
+
+#range .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+#range .start-date,
+#range .end-date {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#range .inputs-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#range .enter-btn {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+label {
+    font-size: 20px;
+}
+
+/*about*/
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    border: 3px solid #49264F;
+    border-radius: 8px;
+    width: 300px;
+    height: 350px;
+
+    margin-bottom: 20px;
+}
+
+#about .github,
+#about .x-account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    transition: all ease 0.15s;
+}
+
+#about .account {
+    width: 114px;
+    margin-left: 10px;
+    font-size: 25px;
+
+    color: #EDF2F4;
+
+    text-shadow: 0px 3px 0px #aaa1c8,
+        0px 5px 5px #FAFAFF;
+}
+
+#about .github:hover,
+#about .x-account:hover {
+    transform: translateX(8px);
+}
+
+#about .name {
+    font-size: 2rem;
+    color: #EDF2F4;
+
+    text-shadow: 0px 3px 0px #aaa1c8,
+        0px 5px 5px #FAFAFF;
+}
